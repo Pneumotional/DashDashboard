@@ -15,6 +15,7 @@ from dash_iconify import DashIconify
 app = dash.Dash(__name__, 
                 external_stylesheets=[dbc.themes.BOOTSTRAP, '/assets/style.css'],  use_pages=True, suppress_callback_exceptions=True)
 
+server = app.server
 
 
 def create_database():
@@ -137,5 +138,4 @@ def update_theme(dark_mode):
 
 
 if __name__ == '__main__':
-    create_database()
     app.run_server(debug=True)
